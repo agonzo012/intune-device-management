@@ -18,11 +18,14 @@ and the PowerShell detection scripts that go with it.
 ## What I'm Building
 
 - **Device enrollment** — enroll a Windows VM as a managed device in Intune
+  Outcome: Blocked — the VM is not Azure AD joined; needs an interactive RDP session.
 - **Compliance policy** — require BitLocker and a PIN — Done Nov 21, 2026
   (see [intune-compliance-policy-summary.pdf](intune-compliance-policy-summary.pdf))
+  Outcome: policy 'Require BitLocker and PIN' is live, assigned to All devices.
 - **App deployment** — deploy an app (7-Zip or Chrome) to the VM through Intune
-- **Detection script** — a PowerShell script that checks whether the app is
-  installed
+  Outcome: Blocked — needs a locally prepared .intunewin package.
+- **Detection script** — a PowerShell script that checks whether the app is installed
+  Outcome: script written (Test-AppInstalled.ps1 in powershell-toolkit); not yet used in an Intune deployment.
 
 ## Status
 
